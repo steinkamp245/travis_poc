@@ -4,6 +4,7 @@
   "description": "test project",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "jest --verbose --runInBand --forceExit --detectOpenHandles"
   },
   "keywords": [],
