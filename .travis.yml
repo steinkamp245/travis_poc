@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t steinkamp245/travis_poc -f Dockerfile.dev .
+
+script:
+  - docker run steinkamp245/travis_poc npm run test
