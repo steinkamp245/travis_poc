@@ -6,5 +6,7 @@ COPY server/package.json .
 RUN npm install
 
 COPY server/ .
+RUN npm i -g typescript
+RUN tsc
 
 CMD ["npm", "run", "start"]
