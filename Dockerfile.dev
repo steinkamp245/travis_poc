@@ -2,11 +2,12 @@ FROM node:alpine
 
 WORKDIR '/app'
 
+RUN npm i -g typescript
+
 COPY server/package.json .
 RUN npm install
 
 COPY server/ .
-RUN npm i -g typescript
 RUN tsc
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "test"]
