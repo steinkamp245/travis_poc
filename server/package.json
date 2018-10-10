@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "test": "jest neu.test.js"
+    "test": "jest --verbose --runInBand --forceExit --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
