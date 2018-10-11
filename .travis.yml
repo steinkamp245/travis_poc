@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run steinkamp245/travis_poc npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "travisPOC"
+  env: "Travispoc-env"
+  bucket_name: "elasticbeanstalk-us-east-2-705210230604"
+  bucket_path: "travisPOC"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEZ
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
