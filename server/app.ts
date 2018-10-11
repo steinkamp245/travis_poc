@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
 });
 
 const PORT = process.env.NODE_ENV === 'test' ? 0 : (process.env.PORT || 3000);
-const server = app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+const server = app.listen(80, () => console.log(`Listening on port ${80}`));
 
 module.exports = server;
